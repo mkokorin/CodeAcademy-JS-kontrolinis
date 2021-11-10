@@ -1,8 +1,8 @@
 {
     "apartments": [
       {
-        "id": "35846",
-        "type": "flat",
+        "id": "0",
+        "type": "Flat",
         "owner": {
             "fullname": "James Harden",
             "email": "realemail@gmail.com",
@@ -23,8 +23,8 @@
         "imgSrc": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/76109618.jpg?k=ba537b048279407e0241cbd138c6dced32572a4f864bdaf5dbb60c314c3003b0&o="
       },
       {
-        "id": "82345",
-        "type": "house",
+        "id": "1",
+        "type": "House",
         "owner": {
             "fullname": "Steph Curry",
             "email": "halffake@gmail.com",
@@ -45,8 +45,8 @@
         "imgSrc": "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607"
       },
       {
-        "id": "78456",
-        "type": "cottage",
+        "id": "2",
+        "type": "Cottage",
         "owner": {
             "fullname": "Michael Jordan",
             "email": "almostfake@gmail.com",
@@ -61,14 +61,14 @@
             "number": "7"
         },
         "price": {
-            "amount": "400.000",
+            "amount": "400000",
             "currency": "$"
         },
         "imgSrc": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y290dGFnZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
       },
       {
-        "id": "78456",
-        "type": "flat",
+        "id": "3",
+        "type": "Flat",
         "owner": {
             "fullname": "Michael B Jordan",
             "email": "important@gmail.com",
@@ -83,7 +83,7 @@
             "number": "31A"
         },
         "price": {
-            "amount": "60.000",
+            "amount": "60000",
             "currency": "$"
         },
         "imgSrc": "https://pix10.agoda.net/hotelImages/2990481/0/18a4cf39db8ce426d0d20394aeacbeb8.jpg?s=1024x768"

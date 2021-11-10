@@ -1,4 +1,5 @@
 class ApartmentCardComponent {
+    static USD_EUR = 1.17;
     constructor(props) {
       this.props = props;
       this.htmlElement = document.createElement("article");
@@ -7,17 +8,44 @@ class ApartmentCardComponent {
       this.init();
     }
   
+    converter = (curr, amount) => {
+      let converted;
+  
+      switch (curr) {
+        case "$":
+          converted = Math.round(amount * ApartmentCardComponent.USD_EUR)
+          break;
+        case "€":
+          return amount;
+      }
+      return converted
+    };
+  
+  
     init = () => {
-      this.htmlElement.className = "card p-3 shadow-sm";
+      const { type, owner, roomCount, squares, adress, price, imgSrc } = this.props;
+
+      const adressEdited = `${adress.street} ${adress.number}, ${adress.city}, ${adress.country}`
+  
+      this.htmlElement.className = "card p-3 shadow";
       this.htmlElement.innerHTML = `
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-       </div>
-      </div>`
-  
-  
+      <img class="card-img-top" src="${imgSrc}">
+      <div class="card-body">
+        <h4 class="card-title text-center">${type}</h5>
+        <div>
+          <p>Adress: ${adressEdited}</p>
+          <p>Room Count: ${roomCount}</p>
+          <p>Squares: ${squares}</p>
+        </div>
+        <div>
+           <p class="text-center">Owner</p>
+           <p>Name: ${owner.fullname} </p>
+           <p>Email: ${owner.email} </p>
+           <p>Phone: ${owner.phone} </p>
+         </div>
+         <p>Price: ${this.converter(price.currency, price.amount)} € </p>
+    </div>
+    </div>
+    `
     };
   }
