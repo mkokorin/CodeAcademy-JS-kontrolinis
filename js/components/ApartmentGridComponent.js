@@ -20,6 +20,8 @@ class ApartmentGridComponent {
     API.fetchAparts(this.saveAparts, this.showError);
   };
 
+  deleteAparts = id => API.deleteAparts(id, this.fetchAparts, this.showError);
+
   wrapChild = (htmlElement) => {
     const wrapper = document.createElement('div');
     wrapper.className = 'col-12 col-sm-6 col-lg-4 col-xl-3 align-self-stretch';
@@ -42,14 +44,15 @@ class ApartmentGridComponent {
       this.htmlElement.innerHTML = `<div class ="text-center"><img src="assets/loading.gif " /> </div>`;
     } else if (apartaments.length > 0) {
       this.htmlElement.innerHTML = ''
-      const aparts = apartaments.map(({ ...apartsProps }) => new ApartmentCardComponent({
+      const aparts = apartaments.map(({ id, ...apartsProps }) => new ApartmentCardComponent({
         ...apartsProps,
+            onDelete: () => this.deleteAparts(id)
           }))
           .map(component => component.htmlElement)
           .map(this.wrapChild)
-
       this.htmlElement.append(...aparts)
-
-    }
+    } else {
+        this.htmlElement.innerHTML = 'Kol kas tuscia';
   };
+}
 }
