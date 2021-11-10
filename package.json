@@ -1,0 +1,23 @@
+{
+  "name": "js-kontrolinis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-win": "node_modules\\.bin\\json-server --watch db.json",
+    "start-unix": "node_modules/.bin/json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkokorin/CodeAcademy-JS-kontrolinis.git"
+  },
+  "author": "Maksim Kokorin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkokorin/CodeAcademy-JS-kontrolinis/issues"
+  },
+  "homepage": "https://github.com/mkokorin/CodeAcademy-JS-kontrolinis#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
