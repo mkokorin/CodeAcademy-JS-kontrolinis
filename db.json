@@ -1,0 +1,92 @@
+{
+    "apartment": [
+      {
+        "id": "35846",
+        "type": "flat",
+        "owner": {
+            "fullname": "James Harden",
+            "email": "realemail@gmail.com",
+            "phone": "+3706 123 4567"
+        },
+        "roomCount": "4",
+        "squares": "72m",
+        "adress": {
+            "city": "Vilnius",
+            "country": "Lithuania",
+            "street": "Vilniaus g.3",
+            "number": "29"
+        },
+        "price": {
+            "amount": "160.000",
+            "currency": "€"
+        },
+        "imgSrc": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/76109618.jpg?k=ba537b048279407e0241cbd138c6dced32572a4f864bdaf5dbb60c314c3003b0&o="
+      },
+      {
+        "id": "82345",
+        "type": "house",
+        "owner": {
+            "fullname": "Steph Curry",
+            "email": "halffake@gmail.com",
+            "phone": "+3706 765 4321"
+        },
+        "roomCount": "6",
+        "squares": "143m",
+        "adress": {
+            "city": "Vilnius",
+            "country": "Lithuania",
+            "street": "Uzupio g.7",
+            "number": "5"
+        },
+        "price": {
+            "amount": "320.000",
+            "currency": "€"
+        },
+        "imgSrc": "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607"
+      },
+      {
+        "id": "78456",
+        "type": "cottage",
+        "owner": {
+            "fullname": "Michael Jordan",
+            "email": "almostfake@gmail.com",
+            "phone": "+3705 7451 412"
+        },
+        "roomCount": "9",
+        "squares": "300m",
+        "adress": {
+            "city": "Kaunas",
+            "country": "Lithuania",
+            "street": "Sodu g.",
+            "number": "7"
+        },
+        "price": {
+            "amount": "400.000",
+            "currency": "$"
+        },
+        "imgSrc": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y290dGFnZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+      },
+      {
+        "id": "78456",
+        "type": "flat",
+        "owner": {
+            "fullname": "Michael B Jordan",
+            "email": "important@gmail.com",
+            "phone": "+3705 7451 412"
+        },
+        "roomCount": "2",
+        "squares": "52m",
+        "adress": {
+            "city": "Klaipeda",
+            "country": "Lithuania",
+            "street": "Sodu g.",
+            "number": "31A"
+        },
+        "price": {
+            "amount": "60.000",
+            "currency": "$"
+        },
+        "imgSrc": "https://pix10.agoda.net/hotelImages/2990481/0/18a4cf39db8ce426d0d20394aeacbeb8.jpg?s=1024x768"
+      }
+    ]
+  }
