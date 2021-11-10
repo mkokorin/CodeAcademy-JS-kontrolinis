@@ -1,16 +1,16 @@
-const serverURL = 'http://localhost:3000'
+const serverURL = "http://localhost:3000";
 
 class API {
-    static fetchApartments = (success, failure) => {
-        fetch(`${serverURL}/apartments/`)
-            .then(res => res.json())
-            .then(success)
-            .catch(failure)
-    }
+  static fetchAparts = (success, failure) => {
+    fetch(`${serverURL}/apartments`)
+      .then((res) => res.json())
+      .then(success)
+      .catch(failure);
+  };
 
-    static deleteApartments = (id, success, failure) => {
-        fetch(`${serverURL}/apartments/${id}`, { method: 'DELETE' })
-            .then(success)
-            .then(failure)
-    }
+  static deleteAparts = (id, success, failure) => {
+    fetch(`${serverURL}/apartments/${id}`, { method: "DELETE" })
+      .then(success)
+      .catch(failure);
+  };
 }

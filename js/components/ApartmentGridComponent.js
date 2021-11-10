@@ -1,31 +1,55 @@
-class ApartmentsGridComponent {
+class ApartmentGridComponent {
     constructor() {
-        this.htmlElement = document.createElement('div');
-        this.state = {
-            apartments: [],
-        };
-        this.init();
+      this.state = {
+        apartaments: [],
+        loading: false,
+      };
+      this.init();
     }
-
-    saveData = (apartments) => {
-        this.state.apartments = {apartments}
-        this.render()
+  
+    saveAparts = (apartaments) => {
+      this.state = { apartaments, loading: false };
+      this.render();
+    };
+  
+    showError = (error) => {
+      console.error(error);
+    };
+  
+    fetchAparts = () => {
+      API.fetchAparts(this.saveAparts, this.showError);
+    };
+  
+    wrapChild = (htmlElement) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'col-12 col-sm-6 col-lg-4 col-xl-3 align-self-stretch';
+      wrapper.append(htmlElement);
+      return wrapper;
     }
-
-    showError = error => {
-        console.error(error)
-    }
-
+  
     init = () => {
-        API.fetchApartments(this.saveData, this.showError)
-        this.render()
-    }
-
+      this.state.loading = true;
+      setTimeout(this.fetchAparts, 1000);
+      this.htmlElement = document.createElement("div");
+      this.htmlElement.className = 'row g-3'
+  
+      this.render();
+    };
+  
     render = () => {
-        if (this.state.apartments.length === 0) {
-            this.htmlElement.innerHTML = '<img src="assets/loading.gif" style="width: 256px">'
-        } else {
-            this.htmlElement.innerHTML = '<pre>' +JSON.stringify(this.state.apartments) + '</pre>'
-        }
-    }
-}
+      const { loading, apartaments } = this.state;
+      if (loading) {
+        this.htmlElement.innerHTML = `<div class ="text-center"><img src="assets/loading.gif " /> </div>`;
+      } else if (apartaments.length > 0) {
+        this.htmlElement.innerHTML = ''
+        const aparts = apartaments.map(({ ...apartsProps }) => new ApartmentCardComponent({
+          ...apartsProps,
+            }))
+            .map(component => component.htmlElement)
+            .map(this.wrapChild)
+  
+        this.htmlElement.append(...aparts)
+  
+      }
+    };
+  }

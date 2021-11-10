@@ -1,5 +1,5 @@
-const rootContainer = document.querySelector('#root');
+const root = document.querySelector("#root");
 
-const apartmentsGrid = new ApartmentsGridComponent();
+const apartsGrid = new ApartmentGridComponent();
 
-rootContainer.append(apartmentsGrid.htmlElement);
+root.append(apartsGrid.htmlElement);
