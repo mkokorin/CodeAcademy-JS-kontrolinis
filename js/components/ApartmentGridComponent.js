@@ -2,13 +2,13 @@ class ApartmentsGridComponent {
     constructor() {
         this.htmlElement = document.createElement('div');
         this.state = {
-            apartments: []
+            apartments: [],
         };
         this.init();
     }
 
     saveData = (apartments) => {
-        this.state.apartments = apartments
+        this.state.apartments = {apartments}
         this.render()
     }
 
@@ -23,7 +23,7 @@ class ApartmentsGridComponent {
 
     render = () => {
         if (this.state.apartments.length === 0) {
-            this.htmlElement.innerHTML = 'No'
+            this.htmlElement.innerHTML = '<img src="assets/loading.gif" style="width: 256px">'
         } else {
             this.htmlElement.innerHTML = '<pre>' +JSON.stringify(this.state.apartments) + '</pre>'
         }
